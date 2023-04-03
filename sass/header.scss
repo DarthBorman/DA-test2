@@ -1,0 +1,388 @@
+.header {
+  color: $white;
+  height: 481px;
+  min-height: 481px;
+  position: relative;
+  display: block;
+  overflow: hidden;
+  @include _2500{
+    min-height: 835px;
+  }
+  @include _1440-2500{
+    min-height: 33.4vw;
+  }
+  .content-wrap {
+    position: relative;
+  }
+  &__mobile-panel{
+    display: none;
+    @include _1024{
+      display: block;
+      position: fixed;
+      width: 100vw;
+      height: 65px;
+      top: 0px;
+      left: 0;
+      z-index: 1;
+      background-color: rgba(0,0,0,0.4);
+    }
+  }
+  &__logo {
+    position: absolute;
+    top: 34px;
+    left: 0;
+    z-index: 2;
+    display: block;
+    transition: 0.5s;
+    &:hover {
+      opacity: 0.6;
+    }
+    @include _2500{
+      top: 59px;
+      img {
+        width: 317.5px;
+        height: auto;
+      }
+    }
+    @include _1440-2500{
+      top: 2.36vw;
+      img {
+        width: 12.7vw;
+        height: auto;
+      }
+    }
+    @include _1024{
+      position: fixed;
+      top: 16px;
+      left: 18px;
+      img{
+        width: 150px;
+        height: auto;
+      }
+    }
+  }
+
+  .main-menu {
+    display: inline-block;
+    position: absolute;
+    z-index: 1;
+    top: 42px;
+    right: 0;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-left: 0;
+    li {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 30px;
+
+      a {
+        font-weight: 700;
+        color: $white !important;
+        font-size: 15px;
+        line-height: 20px;
+        text-transform: uppercase;
+        text-decoration: none;
+        transition: 0.5s;
+        &:hover {
+          opacity: 0.6;
+        }
+      }
+    }
+    @include _2500{
+      top: 72.75px;
+      li{
+        margin-left: 52px;
+        a{
+          font-size: 26px;
+        }
+      }
+    }
+    @include _1440-2500{
+      top: 2.91vw;
+      li{
+        margin-left: 2.08vw;
+        a{
+          font-size: 1.04vw;
+        }
+      }
+    }
+    @include _1024{
+      position: fixed;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-evenly;
+      top: 0;
+      left: -100vw;
+      transition: 0.5s;
+      width: 100vw;
+      height: 100vh;
+      padding-top: 10vh;
+      padding-bottom: 10vh;
+      background-color: #000;
+      box-sizing: border-box;
+      li{
+        display: block;
+        width: 100%;
+        text-align: center;
+        margin-left: 0;
+        a{
+          font-size: 24px;
+        }
+      }
+    }
+  }
+  .show-mobile-menu{
+    left: 0 !important;
+  }
+  #dad-mobile-btn {
+    display: none;
+    @include _1024 {
+      display: block;
+      position: fixed;
+      top: 20px;
+      right: 20px;
+      z-index: 1;
+      width: 30px;
+      height: 30px;
+    }
+  }
+
+  .dad-span-1,
+  .dad-span-2,
+  .dad-span-3 {
+    position: absolute;
+    width: 30px;
+    height: 4px;
+    background-color: #fff;
+    left: 0px;
+    transition: 0.3s;
+  }
+
+  .dad-span-1 {
+    top: 0px;
+  }
+
+  .dad-span-2 {
+    top: 10px;
+  }
+
+  .dad-span-3 {
+    top: 21px;
+  }
+
+  .mobile-btn-view-2 .dad-span-1 {
+    transform: rotate(45deg);
+    top: 10px;
+  }
+
+  .mobile-btn-view-2 .dad-span-2 {
+    display: none;
+  }
+
+  .mobile-btn-view-2 .dad-span-3 {
+    top: 10px;
+    transform: rotate(-45deg);
+  }
+
+  .banner {
+    width: 100%;
+
+    &__img {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: auto;
+      @include _2500{
+        width: 100%;
+      }
+      @include _1440-2500{
+        width: 100%;
+      }
+    }
+
+    &__body {
+      position: relative;
+      width: 667px;
+      margin: 0 auto;
+      margin-top: 141px;
+      width: 687px;
+      @include _2500{
+        width: 1192px;
+        margin-top: 244.75px;
+      }
+      @include _1440-2500{
+        width: 47.7vw;
+        margin-top: 9.79vw;
+      }
+      @include _768{
+        width: 90%;
+      }
+    }
+
+    &__frame {
+      border-radius: 8px;
+      width: 100%;
+      height: 171px;
+      position: absolute;
+      left: 0;
+      z-index: 0;
+      top: 29px;
+      box-sizing: border-box;
+      overflow: hidden;
+      @include _2500{
+        height: 296px;
+        top: 50px;
+      }
+      @include _1440-2500{
+        height: 11.875vw;
+        top: 2.013vw;
+      }
+      @include _768{
+        display: none;
+      }
+    }
+    &__top-left{
+      border-top-left-radius: 8px;
+      border-left: 1px solid $white;
+      border-top: 1px solid $white;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width:160px;
+      height: 150px;
+      @include _1440-2500{
+        width: 11.1vw;
+        height: 10.41vw;
+      }
+      @include _2500{
+        width: 277px;
+        height: 260px;
+      }
+    }
+    &__top-right{
+      border-top-right-radius: 8px;
+      border-right: 1px solid $white;
+      border-top: 1px solid $white;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 160px;
+      height: 150px;
+      @include _2500{
+        width: 277px;
+        height: 260px;
+      }
+    }
+    &__bottom-left{
+      border-bottom-left-radius: 8px;
+      border-left: 1px solid $white;
+      border-bottom: 1px solid $white;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 230px;
+      height: 150px;
+      @include _1440-2500{
+        width: 15.97vw;
+        height: 10.41vw;
+      }
+      @include _2500{
+        width: 400px;
+        height: 260px;
+      }
+    }
+    &__bottom-right{
+      border-bottom-right-radius: 8px;
+      border-right: 1px solid $white;
+      border-bottom: 1px solid $white;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 230px;
+      height: 150px;
+      @include _1440-2500{
+        width: 15.97vw;
+        height: 10.41vw;
+      }
+      @include _2500{
+        width: 400px;
+        height: 260px;
+      }
+    }
+    &__title {
+      text-align: center;
+      font-weight: 700;
+      font-size: 36px;
+      margin-top: 0;
+      margin-bottom: 0;
+      position: relative;
+      @include _2500{
+        font-size: 62.5px;
+      }
+      @include _1440-2500{
+        font-size: 2.5vw;
+      }
+    }
+
+    &__text {
+      width: 461px;
+      margin: 0 auto;
+      margin-top: 31px;
+      color: $white;
+      opacity: 0.8;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1.4;
+      @include _2500{
+        width: 800px;
+        font-size: 27.75px;
+        margin-top: 53.75px;
+      }
+      @include _1440-2500{
+        width: 32.08vw;
+        font-size: 1.11vw;
+        margin-top: 2.15vw;
+      }
+      @include _768{
+        width: 90%;
+        text-align: center;
+      }
+    }
+
+    &__link {
+      width: 165px;
+      height: 50px;
+      line-height: 50px;
+      background-color: $vine;
+      margin: 0 auto;
+      margin-top: 26px;
+      text-align: center;
+      font-weight: 700;
+      font-size: 20px;
+      border-radius: 3px;
+      color: $white !important;
+      text-decoration: none;
+      display: block;
+      position: relative;
+      transition: 0.5s;
+      @include _2500{
+        width: 286px;
+        height: 86.75px;
+        line-height: 86.75px;
+        margin-top: 45px;
+        font-size: 34.5px;
+      }
+      @include _1440-2500{
+        width: 11.45vw;
+        height: 3.47vw;
+        line-height: 3.47vw;
+        margin-top: 1.8vw;
+        font-size: 1.38vw;
+      }
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

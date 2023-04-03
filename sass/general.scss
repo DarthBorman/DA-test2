@@ -1,0 +1,99 @@
+$black: #576072;
+$half-black: #79808E;
+$blue: #0067A3;
+$dark-grey: #2C313A;
+$vine: #931430;
+$white: #fff;
+
+@mixin _2500 {
+  @media (min-width: 2500px){
+    @content;
+  }
+}
+@mixin _1440-2500 {
+  @media (min-width: 1440px) and (max-width: 2500px){
+    @content;
+  }
+}
+@mixin _1200 {
+  @media (max-width: 1200px){
+    @content;
+  }
+}
+@mixin _1024 {
+  @media (max-width: 1024px){
+    @content;
+  }
+}
+@mixin _768 {
+  @media (max-width: 768px){
+    @content;
+  }
+}
+@mixin _480 {
+  @media (max-width: 480px){
+    @content;
+  }
+}
+
+.dib{
+  display: inline-block;
+  vertical-align: top;
+}
+
+/*footer to bottom begin*/
+html, body, .site-wrap {
+  height: 100%;
+}
+.site-wrap {
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+}
+main {
+  flex: 1 0 auto;
+}
+footer {
+  flex-shrink: 0;
+}
+/*footer to bottom end*/
+
+body{
+  margin: 0;
+  background-color: #eee;
+}
+.site-wrap{
+  max-width: 1440px;
+  margin: 0 auto;
+  @include _2500{
+    max-width: 2500px;
+  }
+  @include _1440-2500{
+    max-width: 2500px;
+  }
+}
+.content-wrap{
+  max-width: 1167px;
+  margin: 0 auto;
+  @include _2500{
+    max-width: 2250px;
+  }
+  @include _1440-2500{
+    max-width: 90vw;
+  }
+  @include _1200{
+    max-width: 1000px;
+  }
+  @include _1024{
+    max-width: 750px;
+  }
+  @include _768{
+    max-width: 450px;
+  }
+  @include _480{
+    max-width: 350px;
+  }
+}
+main{
+  background-color: $white;
+}

@@ -1,0 +1,52 @@
+footer{
+  user-select: none;
+  height: 62px;
+  background-color: $dark-grey;
+  color: $white;
+  @include _2500{
+    height: 107.5px;
+  }
+  @include _1440-2500{
+    height: 4.3vw;
+  }
+  .content-wrap{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    height: 62px;
+    line-height: 62px;
+    @include _2500{
+      height: 107.5px;
+      line-height: 107.5px;
+    }
+    @include _1440-2500{
+      height: 4.3vw;
+      line-height: 4.3vw;
+    }
+  }
+  .footer-text{
+    font-family: 'Work Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    @include _2500{
+      font-size: 27.75px;
+    }
+    @include _1440-2500{
+      font-size: 1.11vw;
+    }
+  }
+  .footer-soc a{
+    margin-left: 15px;
+    transition: 0.5s;
+    @include _2500{
+      margin-left: 26px;
+    }
+    @include _1440-2500{
+      margin-left: 1.04vw;
+    }
+    &:hover{
+      opacity: 0.6;
+    }
+  }
+}
